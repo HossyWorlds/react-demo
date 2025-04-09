@@ -1,4 +1,16 @@
 # react-demo
+- reactの基礎を学ぶレポジトリになっている。
+- [reactを学ぶ](https://ja.react.dev/learn)における以下の項目全てやる
+1. クイックスタート
+2. チュートリアル: 三目並べ
+3. Reactの流儀
+4. UIの記述
+5. インタラクティビティの追加
+6. stateの管理
+7. 避難ハッチ
+- [x] test
+- [ ] item
+- [x] checked item
 
 ## 環境構築
 参考: 
@@ -50,3 +62,10 @@ CMD ["npm", "start"]
 
 この状態で以下にアクセスすれば立ち上がる
 http://localhost:3000/
+
+## クイックスタート
+題材: https://ja.react.dev/learn
+>React ドキュメントへようこそ！ このページでは、日々の開発で使用する React のコンセプトのうち 80％ の部分を紹介します。
+
+### オンラインコンバータ
+HTMLとJSXは若干違うので、変換してくれるツール: https://transform.tools/html-to-jsx

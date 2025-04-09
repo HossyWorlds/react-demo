@@ -36,3 +36,11 @@
     transform: rotate(360deg);
   }
 }
+
+.line-icon {
+  border-radius: 20px;
+}
+
+.avatar {
+  border-radius: 50%;
+}
