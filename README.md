@@ -50,3 +50,10 @@ CMD ["npm", "start"]
 
 この状態で以下にアクセスすれば立ち上がる
 http://localhost:3000/
+
+## クイックスタート
+題材: https://ja.react.dev/learn
+>React ドキュメントへようこそ！ このページでは、日々の開発で使用する React のコンセプトのうち 80％ の部分を紹介します。
+
+### オンラインコンバータ
+HTMLとJSXは若干違うので、変換してくれるツール: https://transform.tools/html-to-jsx
