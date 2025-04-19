@@ -10,7 +10,7 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+          Edit <code>src/App.tsx</code> and save to reload.
         </p>
         <a
           className="App-link"
@@ -25,18 +25,6 @@ function App() {
   );
 }
 
-// function MyButton() {
-//   function handleClick() {
-//     alert('You clicked me!');
-//   }
-
-//   return (
-//     <button onClick={handleClick}>
-//       Click me
-//     </button>
-//   );
-// }
-
 function AboutPage() {
   return (
     <>
@@ -48,11 +36,17 @@ function AboutPage() {
 
 function Image() {
   return (
-    <img src={lineIcon} className="line-icon" />
+    <img src={lineIcon} className="line-icon" alt="Line icon" />
   );
 }
 
-const user = {
+interface User {
+  name: string;
+  imageUrl: string;
+  imageSize: number;
+}
+
+const user: User = {
   name: 'Hedy Lamarr',
   imageUrl: 'https://i.imgur.com/yXOvdOSs.jpg',
   imageSize: 90,
@@ -75,45 +69,33 @@ function Profile() {
   )
 }
 
-const products = [
+interface Product {
+  title: string;
+  isFruit: boolean;
+  id: number;
+}
+
+const products: Product[] = [
   { title: 'Cabbage', isFruit: false, id: 1 },
   { title: 'Garlic', isFruit: false, id: 2 },
   { title: 'Apple', isFruit: true, id: 3 },
 ];
 
-// export default App;
+interface ButtonProps {
+  count: number;
+  onClick: () => void;
+}
 
-// export default function MyApp() {
-//   return (
-//     <div>
-//       <h1>Welcome to my app</h1>
-//       <MyButton />
-//       <AboutPage />
-//       <Image />
-//       <Profile />
-//     </div>
-//   );
-// }
-
-// export default function ShoppingList() {
-//   const listItems = products.map(product =>
-//     <li
-//       key={product.id}
-//       style={{
-//         color: product.isFruit ? 'magenta' : 'darkgreen',
-//       }}
-//     >
-//       {product.title}
-//     </li>
-//   );
-
-//   return (
-//     <ul>{listItems}</ul>
-//   )
-// }
+function MyButton({ count, onClick }: ButtonProps) {
+  return (
+    <button onClick={onClick}>
+      Clicked {count} times
+    </button>
+  )
+}
 
 export default function MyApp() {
-  const [count, setCount] = useState(0);
+  const [count, setCount] = useState<number>(0);
 
   function handleClick() {
     setCount(count + 1);
@@ -121,17 +103,9 @@ export default function MyApp() {
 
   return (
     <div>
-      <h1>Couters that update separately</h1>
+      <h1>Counters that update separately</h1>
       <MyButton count={count} onClick={handleClick}/>
       <MyButton count={count} onClick={handleClick}/>
     </div>
   )
-}
-
-function MyButton({ count, onClick }) {
-  return (
-    <button onClick={onClick}>
-      Clicked {count} times
-    </button>
-  )
-}
+} 

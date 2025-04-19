@@ -69,3 +69,23 @@ http://localhost:3000/
 
 ### オンラインコンバータ
 HTMLとJSXは若干違うので、変換してくれるツール: https://transform.tools/html-to-jsx
+
+## プロジェクトをTypeScriptに移行する
+
+```bash
+npm install --save typescript @types/node @types/react @types/react-dom @types/jest
+```
+cursorのAIエージェント（claude-3.7-sonnet）がそれぞれのファイルのTypeScript版を作成してくれた（えぐい）。
+```bash
+npm install --save web-vitals
+```
+```bash
+npm install --save react react-dom
+```
+```bash
+npm install --save-dev @testing-library/react @testing-library/jest-dom
+```
+```bash
+npm install --save react-scripts
+```
+......
